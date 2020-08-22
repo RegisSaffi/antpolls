@@ -276,8 +276,8 @@ export default function View(props) {
 
         if (d !== "") {
           setPollData(d);
-          setLabels(d.data.options);
-          setSeries(d.series);
+          setLabels(d?.data?.options);
+          setSeries(d?.series);
 
           enqueueSnackbar("Voted", {
             variant: "success",

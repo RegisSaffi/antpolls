@@ -247,7 +247,7 @@ export default function Home(props) {
 
           <Box mt={2} display="flex" justifyContent="center">
             <GoogleLogin
-              clientId="46157006038-83pa7hq5vd82bsdioj74vktsah203f25.apps.googleusercontent.com"
+              clientId="287971979617-hjnln18juotljv1kkgemtv9jl8r05mq2.apps.googleusercontent.com"
               buttonText="Sign in with Google"
               onSuccess={responseGoogle}
               onFailure={errorGoogle}
