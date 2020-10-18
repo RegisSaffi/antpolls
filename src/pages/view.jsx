@@ -531,12 +531,12 @@ export default function View(props) {
                   {pollData.data != null ? (
                     pollData.data?.name
                   ) : (
-                    <Skeleton
-                      variant="text"
-                      width={200}
-                      style={{ borderRadius: 7 }}
-                    />
-                  )}
+                      <Skeleton
+                        variant="text"
+                        width={200}
+                        style={{ borderRadius: 7 }}
+                      />
+                    )}
                 </Typography>
               </Box>
               <Box display="flex" alignItems="center" justifyContent="center">
@@ -548,13 +548,13 @@ export default function View(props) {
                   {pollData.data != null ? (
                     pollData.data?.desc
                   ) : (
-                    <Skeleton
-                      variant="text"
-                      height={9}
-                      width={230}
-                      style={{ borderRadius: 7 }}
-                    />
-                  )}
+                      <Skeleton
+                        variant="text"
+                        height={9}
+                        width={230}
+                        style={{ borderRadius: 7 }}
+                      />
+                    )}
                 </Typography>
               </Box>
             </Box>
@@ -564,49 +564,49 @@ export default function View(props) {
                 <List>
                   {pollData.data != null
                     ? pollData.data?.options.map((item, i) => (
-                        <ListItem button>
-                          <ListItemIcon>
-                            <AcUnitRounded />
-                          </ListItemIcon>
-                          <ListItemText primary={item} />
+                      <ListItem button>
+                        <ListItemIcon>
+                          <AcUnitRounded />
+                        </ListItemIcon>
+                        <ListItemText primary={item} />
 
-                          <ListItemSecondaryAction>
-                            <IconButton
-                              disabled={pollData.voted.count != 0}
-                              color="secondary"
-                              onClick={() => {
-                                var d = {
-                                  userid: myid,
-                                  index: i,
-                                };
-                                votePoll(d);
-                              }}
-                            >
-                              {pollData?.voted.index == i ? (
-                                <CheckCircleRounded />
-                              ) : (
+                        <ListItemSecondaryAction>
+                          <IconButton
+                            disabled={pollData.voted.count != 0}
+                            color="secondary"
+                            onClick={() => {
+                              var d = {
+                                userid: myid,
+                                index: i,
+                              };
+                              votePoll(d);
+                            }}
+                          >
+                            {pollData?.voted.index == i ? (
+                              <CheckCircleRounded />
+                            ) : (
                                 <RadioButtonUncheckedRounded />
                               )}
-                            </IconButton>
-                          </ListItemSecondaryAction>
-                        </ListItem>
-                      ))
+                          </IconButton>
+                        </ListItemSecondaryAction>
+                      </ListItem>
+                    ))
                     : [1, 2, 3, 4, 5].map((item, i) => (
-                        <ListItem>
-                          <ListItemIcon>
-                            <Skeleton variant="circle" width={20} />
-                          </ListItemIcon>
-                          <ListItemText
-                            primary={
-                              <Skeleton
-                                variant="text"
-                                width={"100%"}
-                                style={{ borderRadius: 7 }}
-                              />
-                            }
-                          />
-                        </ListItem>
-                      ))}
+                      <ListItem>
+                        <ListItemIcon>
+                          <Skeleton variant="circle" width={20} />
+                        </ListItemIcon>
+                        <ListItemText
+                          primary={
+                            <Skeleton
+                              variant="text"
+                              width={"100%"}
+                              style={{ borderRadius: 7 }}
+                            />
+                          }
+                        />
+                      </ListItem>
+                    ))}
                 </List>
                 <Box mt={3} display="flex" justifyContent="space-evenly">
                   {pollData?.voted?.count == 0 && token.token != null && (
@@ -647,17 +647,17 @@ export default function View(props) {
                       height={350}
                     />
                   ) : (
-                    <Box>
-                      {" "}
-                      <Skeleton variant="circle" height={250} width={250} />
-                      <Skeleton
-                        variant="text"
-                        height={9}
-                        width={200}
-                        style={{ borderRadius: 7, marginTop: 10 }}
-                      />
-                    </Box>
-                  )}
+                      <Box>
+                        {" "}
+                        <Skeleton variant="circle" height={250} width={250} />
+                        <Skeleton
+                          variant="text"
+                          height={9}
+                          width={200}
+                          style={{ borderRadius: 7, marginTop: 10 }}
+                        />
+                      </Box>
+                    )}
                 </Box>
               </Grid>
             </Grid>
